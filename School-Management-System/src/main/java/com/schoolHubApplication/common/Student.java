@@ -8,7 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
-
+//STUDENT JAVA CLASS
 @Entity
 @Data
 @Table(name="Student")
@@ -32,5 +32,6 @@ public class Student {
 	private List<AttendanceRecord> attendanceRecords;
 	private ParentContact parentContact;
 	private String profilePhoto;
+
 	
 }
