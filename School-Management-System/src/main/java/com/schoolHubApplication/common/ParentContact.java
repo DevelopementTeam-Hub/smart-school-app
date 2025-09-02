@@ -3,7 +3,7 @@ package com.schoolHubApplication.common;
 import jakarta.persistence.Embeddable;
 import lombok.Data;
 
-@Embeddable  //without creating an object
+@Embeddable  //without creating any Table Embeddable table will be generated
 @Data
 public class ParentContact {
 	
