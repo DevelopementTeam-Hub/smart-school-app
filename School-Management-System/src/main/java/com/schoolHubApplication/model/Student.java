@@ -13,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.Data;
 //STUDENT JAVA CLASS
@@ -22,43 +23,50 @@ import lombok.Data;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	/*@SequenceGenerator(name="SEQ",initialValue = 394190,allocationSize = 1) 2025057001
+	@GeneratedValue(generator ="SEQ",strategy=GenerationType.SEQUENCE)*/
     @Column(name = "STUDENT_ID")
     private Integer studentId;
-
-    @Column(name = "STUDENT_NAME")
-    private String studentFullName;
-
-    @Column(name = "FATHER_NAME")
+    
+    @Column(name = "STUDENT_FNAME")  //initial name  input
+    private String student_firstName;
+    
+    @Column(name = "STUDENT_LNAME")  //input button
+    private String student_lastName;
+   
+    @Column(name = "FATHER_NAME") //input button
     private String fatherName;
 
-    @Column(name = "MOTHER_NAME")
+    @Column(name = "MOTHER_NAME") //input button
     private String motherName;
 
-    @Column(name = "GENDER")
+    @Column(name = "GENDER")  //radio button
     private String gender;
 
-    @Column(name = "AADHAR_NUMBER")
+    @Column(name = "AADHAR_NUMBER") //input button
     private Long aadharNumber;
 
-    @Column(name = "DOB")
+    @Column(name = "DOB") // dob calendar 
     private LocalDate dateOfBirth;
 
-    @Column(name = "BOARD")
-    private String board;
+    @ElementCollection
+    @CollectionTable(name="STUDENT_BOARD",joinColumns = @JoinColumn(name="STUDENT_ID"))	
+    @Column(name="stud_board")																			//1.ssc 2.cbsc  input drop down >  two way's		//list
+    private List<String> board;  //	STUDENT_BOARD  DEFAULT
 
-    @Column(name = "SCHOOL")
+    @Column(name = "SCHOOL") //drop down  Input   //list
     private String school; 
     
-    @Column(name = "RESERVATION")
+    @Column(name = "RESERVATION") //input  //list
     private String reservationType;
     
-    @Column(name = "CONTACT_NUMBER")
+    @Column(name = "CONTACT_NUMBER") //input
     private String contactNumber;
 
-    @Column(name = "ADDRESS")
+    @Column(name = "ADDRESS")  //input 
     private String address;
 
-    @Column(name = "JOIN_DATE")
+    @Column(name = "JOIN_DATE")  //local 
     private LocalDate enrollmentDate;
 
     @ElementCollection
@@ -77,7 +85,7 @@ public class Student {
     @Column(name = "LANGUAGES")
     private List<String> languages;
 
-
+    	
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "STUDENT_ID")
     private List<AttendanceRecord> attendanceRecords;

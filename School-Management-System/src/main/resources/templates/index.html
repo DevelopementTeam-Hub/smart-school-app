@@ -7,9 +7,19 @@
 <body>
     <h1>Welcome to SchoolHub</h1>
     <form action="#" method="POST">
-    	NAME:<input type="text" name="stdName"/>
-    	NAME:<input type="text" name="stdName"/>
+      <pre>
+    	FIRST    NAME  	:<input type="text" name=student_firstName/>
+    	LAST     NAME   :<input type="text" name="student_lastName"/>
+    	FATHER   NAME  	:<input type="text" name="father_name"/>
+    	MOTHER   NAME   :<input type="text" name="mother_name"/>
+    	GENDER         	:<input type="radio" name="gender" value="1">MALE <input type="radio" name="gender" value="1">FEMALE<input type="radio" name="gender" value="1">OTHERS
+    	AADHAR NUMBER 	:<input type="text" name="aadhar_number"/>
+        DATE OF BIRTH   :<input type="date" name="date_of_birth"/>
+        BOARD	NAME	:<select id="b1" name="board"><option value="board">SSC</option> <option value="board">CBSC</option></select>
+        SCHOOL  NAME	:<select id="s1" name="school_name"><option value="school_name">Z.P.High School</option> <option value="school_name">Narayana</option></select>				
+        RESERVATION     :<select id="r1" name="reservation_type"><option value="1">SC</option> <option value="1">ST</option><option value="1">OBC</option></select>
+        CONTACT_NUMBER  :<input type="text" name="contact_number"/>
+      </pre>
     </form>
-    
 </body>
 </html>
