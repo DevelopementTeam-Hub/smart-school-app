@@ -1,4 +1,4 @@
-package com.schoolHubApplication.model;
+package com.schoolHubApp;
 
 import java.time.LocalDate;
 import java.util.List;

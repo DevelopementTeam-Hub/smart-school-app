@@ -1,4 +1,4 @@
-package com.schoolHubApplication.model;
+package com.schoolHubApp;
 
 import jakarta.persistence.Embeddable;
 import lombok.Data;

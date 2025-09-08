@@ -1,4 +1,4 @@
-package com.schoolHubApplication.entity;
+package com.schoolHub;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
