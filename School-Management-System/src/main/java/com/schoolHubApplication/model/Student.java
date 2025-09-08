@@ -59,7 +59,7 @@ public class Student {
     
     @Column(name = "RESERVATION") //input  //list
     private String reservationType;
-  // 
+ 
     @Column(name = "CONTACT_NUMBER") //input
     private String contactNumber;
 
