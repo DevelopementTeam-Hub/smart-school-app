@@ -88,7 +88,7 @@ public class Student {
 	/* 	
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "STUDENT_ID")
-	private List<AttendanceRecord> attendanceRecords;
+	private List<AttendanceRecord> attendanceRecords;  26-JDFJD  PRESENT 
 	
 	@ElementCollection
 	@CollectionTable(

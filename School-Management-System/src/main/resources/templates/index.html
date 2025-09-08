@@ -22,7 +22,7 @@
     	
         DATE OF BIRTH   : <input type="date" name="date_of_birth"/>
         
-        BOARD	NAME	: <select id="b1" name="board" multiple >
+        BOARD	NAME	: <select id="b1" name="board" >
         					 <option value="SSC">SSC</option>	
         					 <option value="CBSC">CBSC</option>
        					  </select>
@@ -32,7 +32,7 @@
         					<option value="Narayana School">Narayana School</option>
         				  </select>			
         					
-        RESERVATION     : <select id="r1" name="reservation_type" multiple>
+        RESERVATION     : <select id="r1" name="reservation_type" >
         					<option value="SC">SC</option>
         				    <option value="ST">ST</option>
          					<option value="OBC">OBC</option>
@@ -44,17 +44,16 @@
         
         JOIN DATE       : <input type="date" name="enrollment_date"/>
         
-        SECTION         : <select id="sec" name="section" multiple>
+        SECTION         : <select id="sec" name="section" >
                             <option value="A">A</option>
                             <option value="B">B</option>
                             <option value="C">C</option>
         				  </select>
-        LANGUAGE        : <select id="lang" name="language"multiple>
-							<option value="Telugu">Telugu</option>
-							<option value="English">English</option>
-							<option value="Hindi">Hindi</option>
-						  </select>
+        LANGUAGE        : <input type="checkbox" name="languages" value="Telugu">Telugu
+                          <input type="checkbox" name="languages" value="English">English
+                          <input type="checkbox" name="languages" value="Hindi">Hindi
 		
+				<input type="submit" value="Register">
       </pre>
     </form>
 </body>
