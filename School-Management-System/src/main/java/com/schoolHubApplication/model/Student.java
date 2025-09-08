@@ -12,8 +12,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.Data;
 //STUDENT JAVA CLASS
@@ -85,41 +83,43 @@ public class Student {
     @Column(name = "LANGUAGES")
     private List<String> languages;
 
-    	
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "STUDENT_ID")
-    private List<AttendanceRecord> attendanceRecords;
     
-    @ElementCollection
-    @CollectionTable(
-        name = "STUDENT_PARENT_CONTACTS",
-        joinColumns = @JoinColumn(name = "STUDENT_ID")
-    )
-    private List<ParentContact> parentDetails;
-
-    @Column(name = "PROFILE")
-    private String profilePhoto;
-
-//    Location Information
-    @Column(name = "STATE")
-    private String state;
-
-    @Column(name = "DISTRICT")
-    private String district;
     
-    @Column(name = "BRANCH_TYPE")	//dayScholar
-    private String branchType;
-    
-    @Column(name = "CAMPUS")  //co-education 
-    private String campusType;
-
-    @Column(name = "BRANCH")//branch of school different branch code
-    private String branch;
-    
-    @Column(name = "CLASS_NAME") //section  batchNO  class room
-    private String className;
-    
-    @Column(name = "HOSTEL") //day
-    private String dayHostel;	       
+	/* 	
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "STUDENT_ID")
+	private List<AttendanceRecord> attendanceRecords;
+	
+	@ElementCollection
+	@CollectionTable(
+	    name = "STUDENT_PARENT_CONTACTS",
+	    joinColumns = @JoinColumn(name = "STUDENT_ID")
+	)
+	private List<ParentContact> parentDetails;
+	
+	@Column(name = "PROFILE")
+	private String profilePhoto;
+	*/
+	/*//    Location Information
+	@Column(name = "STATE")
+	private String state;
+	
+	@Column(name = "DISTRICT")
+	private String district;
+	
+	@Column(name = "BRANCH_TYPE")	//dayScholar
+	private String branchType;
+	
+	@Column(name = "CAMPUS")  //co-education 
+	private String campusType;
+	
+	@Column(name = "BRANCH")//branch of school different branch code
+	private String branch;
+	
+	@Column(name = "CLASS_NAME") //section  batchNO  class room
+	private String className;
+	
+	@Column(name = "HOSTEL") //day
+	private String dayHostel;	       */
 }
 

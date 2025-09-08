@@ -16,28 +16,26 @@
     	
     	MOTHER   NAME   : <input type="text" name="mother_name"/>
     	
-    	GENDER         	: <input type="radio" name="gender" value="1">MALE
-                          <input type="radio" name="gender" value="1">FEMALE
-                          <input type="radio" name="gender" value="1">OTHERS
-    					 
+    	GENDER         	: <input type="radio" name="gender" value="male">Male
+                          <input type="radio" name="gender" value="female">Female
     	AADHAR NUMBER 	: <input type="text" name="aadhar_number"/>
     	
         DATE OF BIRTH   : <input type="date" name="date_of_birth"/>
         
-        BOARD	NAME	: <select id="b1" name="board">
-        					 <option value="board">SSC</option>	
-        					 <option value="board">CBSC</option>
+        BOARD	NAME	: <select id="b1" name="board" multiple >
+        					 <option value="SSC">SSC</option>	
+        					 <option value="CBSC">CBSC</option>
        					  </select>
        					 
-        SCHOOL  NAME	: <select id="s1" name="school_name">
-        					<option value="school_name">Z.P.High School</option> 	
-        					<option value="school_name">Narayana School</option>
+        SCHOOL  NAME	: <select id="s1" name="school_name" multiple>
+        					<option value="Z.P.High School">Z.P.High School</option> 	
+        					<option value="Narayana School">Narayana School</option>
         				  </select>			
         					
-        RESERVATION     : <select id="r1" name="reservation_type">
-        					<option value="1">SC</option>
-        				    <option value="1">ST</option>
-         					<option value="1">OBC</option>
+        RESERVATION     : <select id="r1" name="reservation_type" multiple>
+        					<option value="SC">SC</option>
+        				    <option value="ST">ST</option>
+         					<option value="OBC">OBC</option>
          				  </select>
          				
         CONTACT_NUMBER  : <input type="text" name="contact_number"/>
@@ -46,15 +44,15 @@
         
         JOIN DATE       : <input type="date" name="enrollment_date"/>
         
-        SECTION         : <select id="sec" name="section">
-                            <option value="sec1">A</option>
-                            <option value="sec2">B</option>
-                            <option value="sec3">C</option>
+        SECTION         : <select id="sec" name="section" multiple>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
         				  </select>
-        LANGUAGE        : <select id="lang" name="language">
-							<option value="lang1">Telugu</option>
-							<option value="lang2">English</option>
-							<option value="lang3">Hindi</option>
+        LANGUAGE        : <select id="lang" name="language"multiple>
+							<option value="Telugu">Telugu</option>
+							<option value="English">English</option>
+							<option value="Hindi">Hindi</option>
 						  </select>
 		
       </pre>
