@@ -10,12 +10,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("date")
+@WebServlet("/date")
 public class StudentServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		doGet(req, res);
 		Date date=new Date();
 		PrintWriter pw = res.getWriter();
 		res.setContentType("text/html");
