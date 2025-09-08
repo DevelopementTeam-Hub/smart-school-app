@@ -1,1 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<welcome-file-lsit>
+		<welcome-file>Test.html</welcome-file>
+	</welcome-file-lsit>
+</web-app>
