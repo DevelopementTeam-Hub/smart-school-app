@@ -1,4 +1,4 @@
-package com.school;
+package com.schoolHubApplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
